@@ -1,0 +1,4 @@
+dist-v2/
+node_modules
+*.env
+.env

@@ -1,0 +1,21 @@
+agent:
+  agentId: baseAgent_agent_1784622850716_eb7hi878w
+  orgId: 26035d7a-f802-4547-98d5-5029f1654329
+skills:
+  - name: ordering-skill
+    skillId: 82469e30-adee-48a3-a6fe-e916cdcaad5a
+    version: 1.0.0
+  - name: mpesa-payment-skill
+    skillId: a529c33f-5572-4a73-ae2f-ad705091aab1
+    version: 1.0.0
+webhooks:
+  - name: mpesa-callback
+    version: 1.0.0
+    webhookId: 7d8b31e0-e937-4f91-9977-cd8a9924adac
+jobs:
+  - jobId: d86b80c2-b005-49a5-b388-9d55785260d4
+    name: release-stale-holds
+    version: 1.0.0
+preprocessors: []
+postprocessors: []
+mcpServers: []
