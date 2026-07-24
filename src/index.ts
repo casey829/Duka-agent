@@ -1,7 +1,6 @@
 import { LuaAgent, LuaSkill } from 'lua-cli';
 import { governance } from './governance';
 import { CheckStockTool, CreateOrderTool } from './skills/tools/OrderTools';
-import { SeedProductsTool } from './skills/tools/SeedProductsTool'; // DEV ONLY — remove before shipping
 import { RequestMpesaPaymentTool, CheckPaymentStatusTool } from './skills/tools/MpesaTools';
 import mpesaCallbackWebhook from './webhooks/MpesaCallbackWebhook';
 import releaseStaleHoldsJob from './jobs/releasestaleholdsjob';
@@ -14,7 +13,7 @@ const orderingSkill = new LuaSkill({
 Always call check_stock before quoting a price — never guess availability.
 Call create_order only after the customer has confirmed both the items and the quantity.
 Read the total back in Kenyan shillings before moving to payment.`,
-  tools: [new CheckStockTool(), new CreateOrderTool(), new SeedProductsTool()],
+  tools: [new CheckStockTool(), new CreateOrderTool()],
 });
 
 const paymentSkill = new LuaSkill({
